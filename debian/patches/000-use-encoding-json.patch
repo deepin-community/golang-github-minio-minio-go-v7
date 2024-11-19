@@ -1,0 +1,68 @@
+From: Mathias Gibbens <gibmat@debian.org>
+Description: Use encoding/json rather than goccy/go-json, as that package doesn't build on s390x
+Forwarded: https://github.com/goccy/go-json/issues/466
+diff --git a/api-bucket-notification.go b/api-bucket-notification.go
+index ad8eada..7842523 100644
+--- a/api-bucket-notification.go
++++ b/api-bucket-notification.go
+@@ -26,7 +26,7 @@ import (
+ 	"net/url"
+ 	"time"
+ 
+-	"github.com/goccy/go-json"
++	"encoding/json"
+ 	"github.com/minio/minio-go/v7/pkg/notification"
+ 	"github.com/minio/minio-go/v7/pkg/s3utils"
+ )
+diff --git a/pkg/credentials/file_minio_client.go b/pkg/credentials/file_minio_client.go
+index 750e26f..624359e 100644
+--- a/pkg/credentials/file_minio_client.go
++++ b/pkg/credentials/file_minio_client.go
+@@ -22,7 +22,7 @@ import (
+ 	"path/filepath"
+ 	"runtime"
+ 
+-	"github.com/goccy/go-json"
++	"encoding/json"
+ )
+ 
+ // A FileMinioClient retrieves credentials from the current user's home
+diff --git a/pkg/credentials/iam_aws.go b/pkg/credentials/iam_aws.go
+index ea4b3ef..3cd259c 100644
+--- a/pkg/credentials/iam_aws.go
++++ b/pkg/credentials/iam_aws.go
+@@ -31,7 +31,7 @@ import (
+ 	"strings"
+ 	"time"
+ 
+-	"github.com/goccy/go-json"
++	"encoding/json"
+ )
+ 
+ // DefaultExpiryWindow - Default expiry window.
+diff --git a/pkg/encrypt/server-side.go b/pkg/encrypt/server-side.go
+index c40e40a..9281977 100644
+--- a/pkg/encrypt/server-side.go
++++ b/pkg/encrypt/server-side.go
+@@ -23,7 +23,7 @@ import (
+ 	"errors"
+ 	"net/http"
+ 
+-	"github.com/goccy/go-json"
++	"encoding/json"
+ 	"golang.org/x/crypto/argon2"
+ )
+ 
+diff --git a/pkg/set/stringset.go b/pkg/set/stringset.go
+index c265ce5..0fd681f 100644
+--- a/pkg/set/stringset.go
++++ b/pkg/set/stringset.go
+@@ -21,7 +21,7 @@ import (
+ 	"fmt"
+ 	"sort"
+ 
+-	"github.com/goccy/go-json"
++	"encoding/json"
+ )
+ 
+ // StringSet - uses map as set of strings.

@@ -1,0 +1,4 @@
+version=4
+opts="filenamemangle=s%(?:.*?)?v?(\d[\d.]*)\.tar\.gz%golang-github-minio-minio-go-v7-$1.tar.gz%" \
+    https://github.com/minio/minio-go/tags \
+    (?:.*?/)?v?(7\.[\d.]*)\.tar\.gz debian

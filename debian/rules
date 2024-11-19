@@ -1,4 +1,13 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_EXCLUDES := examples
+
+# Required for tests:
+export DH_GOLANG_INSTALL_EXTRA := ./pkg/credentials/config.json.sample ./pkg/credentials/credentials.sample ./pkg/credentials/credentials.json
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang
+override_dh_auto_test:
+	# set -short param to avoid tests that access to s3.amazonaws.com
+	# api_functional_v4_test.go is needed for other tests to run
+	dh_auto_test -- -short
