@@ -1,5 +1,130 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-minio-minio-go-v7 (7.0.77-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Mathias Gibbens <gibmat@debian.org>  Fri, 04 Oct 2024 01:23:18 +0000
+
+golang-github-minio-minio-go-v7 (7.0.75-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Mathias Gibbens <gibmat@debian.org>  Sun, 18 Aug 2024 18:10:47 +0000
+
+golang-github-minio-minio-go-v7 (7.0.74-1) unstable; urgency=medium
+
+  * New upstream release
+    - Update Build-Depends and Depends
+    - Add a patch to use encoding/json rather than goccy/go-json, as that
+      package doesn't build on s390x
+
+ -- Mathias Gibbens <gibmat@debian.org>  Wed, 24 Jul 2024 06:59:54 +0000
+
+golang-github-minio-minio-go-v7 (7.0.69-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/control:
+    - Update Standards-Version to 4.7.0 (no changes needed)
+    - Set minimum version of golang to aid backporting
+    - Update Build-Depends and Depends
+  * Update years in d/copyright
+
+ -- Mathias Gibbens <gibmat@debian.org>  Sun, 21 Apr 2024 14:37:57 +0000
+
+golang-github-minio-minio-go-v7 (7.0.67-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Mathias Gibbens <gibmat@debian.org>  Mon, 26 Feb 2024 22:56:03 +0000
+
+golang-github-minio-minio-go-v7 (7.0.66-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update years in d/copyright
+
+ -- Mathias Gibbens <gibmat@debian.org>  Sat, 13 Jan 2024 20:42:10 +0000
+
+golang-github-minio-minio-go-v7 (7.0.63-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Mathias Gibbens <gibmat@debian.org>  Fri, 08 Sep 2023 23:10:09 +0000
+
+golang-github-minio-minio-go-v7 (7.0.61-1) unstable; urgency=medium
+
+  * New upstream release
+  * Mark golang-github-minio-minio-go-v7-dev as Multi-Arch: foreign
+
+ -- Mathias Gibbens <gibmat@debian.org>  Fri, 21 Jul 2023 20:15:19 +0000
+
+golang-github-minio-minio-go-v7 (7.0.57-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Mathias Gibbens <gibmat@debian.org>  Fri, 16 Jun 2023 00:50:29 +0000
+
+golang-github-minio-minio-go-v7 (7.0.46-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version in d/control (no changes needed)
+  * Update d/copyright
+
+ -- Mathias Gibbens <gibmat@debian.org>  Tue, 10 Jan 2023 22:05:35 +0000
+
+golang-github-minio-minio-go-v7 (7.0.45-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update d/watch to only track version 7 releases
+
+ -- Mathias Gibbens <gibmat@debian.org>  Sat, 03 Dec 2022 23:33:05 +0000
+
+golang-github-minio-minio-go-v7 (7.0.43-1) unstable; urgency=medium
+
+  [ Aloïs Micard ]
+  * update debian/gitlab-ci.yml (using pkg-go-tools/ci-config)
+
+  [ Mathias Gibbens ]
+  * New upstream release
+    - Drop no longer needed patch
+  * Update list of installed files in d/rules
+  * d/control:
+    - Add myself to Uploaders
+    - Update Standards-Version (no changes needed)
+    - Update Build-Depends and Depends
+  * Update d/copyright
+
+ -- Mathias Gibbens <gibmat@debian.org>  Sat, 12 Nov 2022 14:05:49 +0000
+
+golang-github-minio-minio-go-v7 (7.0.5-3) unstable; urgency=medium
+
+  * bump minimum required version of golang-github-minio-md5-simd-dev to 1.1.2
+
+ -- Félix Sipma <felix@debian.org>  Sun, 29 Aug 2021 10:23:49 +0200
+
+golang-github-minio-minio-go-v7 (7.0.5-2) unstable; urgency=medium
+
+  * Team upload.
+  * Bump debhelper-compat to 13
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 05 Feb 2021 10:43:17 +0800
+
+golang-github-minio-minio-go-v7 (7.0.5-1) unstable; urgency=medium
+
+  [ Félix Sipma ]
+  * Initial import from golang-github-minio-minio-go
+  * Rename package to golang-github-minio-minio-go-v7
+  * New upstream version 7.0.5
+  * rebase golang-github-minio-minio-go patch
+  * add golang-github-google-uuid-dev, golang-github-json-iterator-go-dev,
+    golang-github-rs-xid-dev to B-D
+  * add golang-github-minio-md5-simd-dev to B-D
+  * remove golang-github-go-ini-ini-dev from B-D
+  * install NOTICE file to comply with Apache-2.0 license
+  * use golang Section
+  * update Standards-Version to 4.5.1 (no change required)
+  * update team email address
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+ -- Félix Sipma <felix+debian@gueux.org>  Mon, 01 Feb 2021 09:33:08 +0100
